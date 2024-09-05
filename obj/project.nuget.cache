@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wymlHmAfb1a2c26O3goVAhbwfxDcL9RBZqkxPxtCT/2cmaYtVGWm2H+KREYYMRa6RWxPDoD4Uxwil94Fdidg8A==",
+  "dgSpecHash": "0OAf0LNlh5FwvrWKTJoO2CLW/8a32H0p0XCsbKPhPbYV1fFXGVEq5/p4FK6tjsj4cWl6n8GHNxekFz0QUwq8Ag==",
   "success": true,
-  "projectFilePath": "/home/sam/Documents/Projects/GalaticoStudioWebsite/GalaticoStudios/GalaticoStudios.csproj",
+  "projectFilePath": "/home/sam/Documents/Projects/Website/GalaticoStudios.csproj",
   "expectedPackageFiles": [
     "/home/sam/.nuget/packages/microsoft.aspnetcore.authorization/6.0.32/microsoft.aspnetcore.authorization.6.0.32.nupkg.sha512",
     "/home/sam/.nuget/packages/microsoft.aspnetcore.components/6.0.32/microsoft.aspnetcore.components.6.0.32.nupkg.sha512",

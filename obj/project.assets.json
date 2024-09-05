@@ -1767,11 +1767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sam/Documents/Projects/GalaticoStudioWebsite/GalaticoStudios/GalaticoStudios.csproj",
+      "projectUniqueName": "/home/sam/Documents/Projects/Website/GalaticoStudios.csproj",
       "projectName": "GalaticoStudios",
-      "projectPath": "/home/sam/Documents/Projects/GalaticoStudioWebsite/GalaticoStudios/GalaticoStudios.csproj",
+      "projectPath": "/home/sam/Documents/Projects/Website/GalaticoStudios.csproj",
       "packagesPath": "/home/sam/.nuget/packages/",
-      "outputPath": "/home/sam/Documents/Projects/GalaticoStudioWebsite/GalaticoStudios/obj/",
+      "outputPath": "/home/sam/Documents/Projects/Website/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/sam/.nuget/NuGet/NuGet.Config"

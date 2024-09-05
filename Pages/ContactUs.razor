@@ -1,0 +1,55 @@
+@page "/contactus";
+
+<PageTitle>Contact Us</PageTitle>
+
+<div class="email-form">
+    <div class="emial-form-section">
+        <p style="width: 200px">Title</p>
+        <input type="text" />
+    </div>
+    
+    <div class="emial-form-section">
+        <p>Contents</p>
+        <textarea class="email-contents"></textarea>
+    </div>
+    
+    <div class="emial-form-section">
+        <button class="email-button" @onclick=SendEmail>Send Email</button>
+    </div>
+</div>
+
+<style>
+    .email-form {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .emial-form-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .email-contents {
+        width: 500px;
+        height: 300px;
+    }
+
+    .email-button {
+        width: 160px;
+    }
+</style>
+
+@code {
+    private void SendEmail()
+    {
+        // TODO: Write code to send email to galaticostudios@gmail.com or other email addresses
+        //       If the user wants to include an email for a response, they can include it in the
+        //       email contents.
+    }
+}
