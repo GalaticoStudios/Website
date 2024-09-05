@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<PageTitle>Galatico Studios</PageTitle>
+
+@foreach (Game game in AllGames)
+{
+    <div class="game-container">
+        <h2>@game.Title</h2>
+        <iframe width="560" height="315" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>@game.Description</p>
+        <a href=@game.Url>@game.UrlText</a>
+    </div>
+}
+
+<style>
+    .game-container {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+@code {
+    public struct Game
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Url { get; set; }
+        public string UrlText { get; set; }
+    }
+
+    private List<Game> AllGames = new List<Game>()
+    {
+        new Game
+        {
+            Title = "Galatico",
+            Description = "Galatico is a first person shooter set in the future with portals.",
+            Url = "https://www.youtube.com/embed/iOm-K8WUV5E?si=vTa4DB7KuE80z9ku",
+            UrlText = "Wishlist On Steam"
+        },
+        new Game
+        {
+            Title = "Loga Culture",
+            Description = "Loga Culture is a game about a place with rocks.",
+            Url = "https://www.youtube.com/embed/iOm-K8WUV5E?si=vTa4DB7KuE80z9ku",
+            UrlText = "Android or iOS?"
+        }
+    };
+}
