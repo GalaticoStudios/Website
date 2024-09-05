@@ -8,7 +8,7 @@
         <h2>@game.Title</h2>
         <iframe width="560" height="315" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>@game.Description</p>
-        <a href=@game.Url>@game.UrlText</a>
+        <button class="game-button">@game.UrlText</button>
     </div>
 }
 
@@ -16,6 +16,10 @@
     .game-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .game-button {
+        width: 160px;
     }
 </style>
 

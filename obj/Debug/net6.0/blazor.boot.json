@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-ZcDPjThCN2BCEYQdojjXnlhAZFrqNEw\/MX36GSJuFxw=",
       "netstandard.dll": "sha256-r5+y+NJTXzpyR9AaNMHpdVOOO50F+qLZjI83TNl3mwI=",
       "System.Private.CoreLib.dll": "sha256-f7ZZcXOXHgUqdmMScZ0DLX2KHCo02\/IdYkvwk4mFL+0=",
-      "GalaticoStudios.dll": "sha256-9CaBO2VHhPvEEsJcDFFhsEJAFbZPD5xjgo2zzPLyZL0="
+      "GalaticoStudios.dll": "sha256-VbVVUxJowEcNT3ToCrP\/Uhzv0qtVzXk5Ifl7tjoVekA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "GalaticoStudios.pdb": "sha256-1m2E86cP8mpt1CAGGnge4zzitUzlu7z1i0JzjgWzNAA="
+      "GalaticoStudios.pdb": "sha256-AtSd5tMGRCpjgrdoEHS242MGn4QCN1Z2RiY8R3QE\/mM="
     },
     "runtime": {
       "dotnet.6.0.32.x9tu4pstsj.js": "sha256-6fa9WVfvYrd56Fl6GQXGO40czbLt6gcYgnZxXB+Sn5A=",
