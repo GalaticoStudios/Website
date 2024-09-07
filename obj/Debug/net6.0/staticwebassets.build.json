@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q/BqlgzTf6fJZ97z0Q8UJD9RaB6BmJ0UD2nz8NUd9Rg=",
+  "Hash": "ymNBO16tL66oWCteWhFgHJI2LYkp6t1e4iks8bd0ZGU=",
   "Source": "GalaticoStudios",
   "BasePath": "/",
   "Mode": "Root",
@@ -7055,23 +7055,6 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/sam/Documents/Projects/Website/wwwroot/GS2.png",
-      "SourceId": "GalaticoStudios",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/sam/Documents/Projects/Website/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "GS2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/GS2.png"
-    },
-    {
       "Identity": "/home/sam/Documents/Projects/Website/wwwroot/icon-192.png",
       "SourceId": "GalaticoStudios",
       "SourceType": "Discovered",
@@ -7121,6 +7104,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/interop.js"
+    },
+    {
+      "Identity": "/home/sam/Documents/Projects/Website/wwwroot/logo.png",
+      "SourceId": "GalaticoStudios",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/sam/Documents/Projects/Website/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/logo.png"
     },
     {
       "Identity": "/home/sam/Documents/Projects/Website/wwwroot/sample-data/weather.json",
