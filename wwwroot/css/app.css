@@ -62,3 +62,8 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.action-button {
+    border-radius: 4px;
+    background-color: rgb(50, 100, 100);
+}

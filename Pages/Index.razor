@@ -7,26 +7,71 @@
 <h1>Our Games</h1>
 <hr>
 
-@foreach (Game game in AllGames)
-{
-    <div class="game-container">
-        <h2>@game.Title</h2>
-        <iframe width="500" height="300" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>@game.Description</p>
-        <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
-    </div>
-}
+<div class="all-games">
+    @foreach (Game game in AllGames)
+    {
+        <div class="game-container">
+            <h2>@game.Title</h2>
+            
+            <div class="game-contents">
+                <div class="description-and-button">
+                    <p class="game-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
+                </div>
+                <iframe width="500" height="300" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    }
+</div>
 
 <style>
+    .all-games {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description-and-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50%;
+    }
+
     .game-container {
         display: flex;
         flex-direction: column;
-        width: 500px;
+        gap: 12px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .game-contents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .game-description {
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .game-button {
-        width: 160px;
-        align-self: flex-end;
+        width: 150px;
+        height: 50px;
+        align-self: center;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(75, 75, 75);
+        color: white;
+    }
+
+    .game-button:hover {
+        background-color: rgb(100, 100, 100);
+        cursor: pointer;
     }
 </style>
 
