@@ -8,41 +8,64 @@
 <div class="email-form">
     <div class="emial-form-section">
         <p>Title</p>
-        <input style="width: 50%" type="text" />
+        <input type="text" class="email-input" />
     </div>
     
     <div class="emial-form-section">
         <p>Contents</p>
-        <textarea class="email-contents"></textarea>
+        <textarea class="email-contents email-input"></textarea>
     </div>
     
-    <div class="emial-form-section">
+    <div class="emial-form-section" style="justify-content: flex-end;">
         <button class="email-button" @onclick=SendEmail>Send Email</button>
     </div>
 </div>
 
 <style>
     .email-form {
-        width: 50%;
-        height: 50%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 12px;
     }
 
     .emial-form-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: flex-start;
         width: 100%;
+        max-width: 1200px;
+    }
+
+    .emial-form-section p {
+        width: 20%;
     }
 
     .email-contents {
+        resize: none;
+        width: 80%;
         height: 300px;
     }
 
     .email-button {
-        width: 160px;
-        align-self: flex-end;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(75, 75, 75);
+        color: white;
+    }
+
+    .email-button:hover {
+        background-color: rgb(100, 100, 100);
+        cursor: pointer;
+    }
+
+    .email-input {
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(75, 75, 75);
+        color: white;
     }
 </style>
 
