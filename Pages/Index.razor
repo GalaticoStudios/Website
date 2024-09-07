@@ -1,5 +1,7 @@
 ﻿@page "/"
 
+@inject IJSRuntime JS;
+
 <PageTitle>Galatico Studios</PageTitle>
 
 @foreach (Game game in AllGames)
@@ -8,7 +10,7 @@
         <h2>@game.Title</h2>
         <iframe width="560" height="315" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>@game.Description</p>
-        <button class="game-button">@game.UrlText</button>
+        <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
     </div>
 }
 
@@ -49,4 +51,9 @@
             UrlText = "Android or iOS?"
         }
     };
+
+    private async void OpenURL(string url)
+    {
+        await JS.InvokeVoidAsync("openInNewTab", url);
+    }
 }

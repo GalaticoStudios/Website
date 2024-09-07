@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gdP8OwVZ1MrUjvApFtWk0XckrK6eXsi0hS7S/yYmaL0=",
+  "Hash": "nSzGVMAoWby1XiEcBL+mhTuc9w6M3N5MODsA5Mda7Zk=",
   "Source": "GalaticoStudios",
   "BasePath": "/",
   "Mode": "Root",
@@ -7087,6 +7087,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/home/sam/Documents/Projects/Website/wwwroot/interop.js",
+      "SourceId": "GalaticoStudios",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/sam/Documents/Projects/Website/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "interop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/interop.js"
     },
     {
       "Identity": "/home/sam/Documents/Projects/Website/wwwroot/sample-data/weather.json",
