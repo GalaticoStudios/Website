@@ -4,11 +4,14 @@
 
 <PageTitle>Galatico Studios</PageTitle>
 
+<h1>Our Games</h1>
+<hr>
+
 @foreach (Game game in AllGames)
 {
     <div class="game-container">
         <h2>@game.Title</h2>
-        <iframe width="560" height="315" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="500" height="300" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>@game.Description</p>
         <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
     </div>
@@ -18,10 +21,12 @@
     .game-container {
         display: flex;
         flex-direction: column;
+        width: 500px;
     }
 
     .game-button {
         width: 160px;
+        align-self: flex-end;
     }
 </style>
 
