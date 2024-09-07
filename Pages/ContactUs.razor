@@ -8,12 +8,12 @@
 <div class="email-form">
     <div class="emial-form-section">
         <p>Title</p>
-        <input type="text" class="email-input" />
+        <input type="text" class="email-input" @bind=title />
     </div>
     
     <div class="emial-form-section">
         <p>Contents</p>
-        <textarea class="email-contents email-input"></textarea>
+        <textarea class="email-contents email-input" @bind=contents></textarea>
     </div>
     
     <div class="emial-form-section" style="justify-content: flex-end;">
@@ -70,6 +70,10 @@
 </style>
 
 @code {
+
+    private string title = string.Empty;
+    private string contents = string.Empty;
+
     private void SendEmail()
     {
         // TODO: Write code to send email to galaticostudios@gmail.com or other email addresses

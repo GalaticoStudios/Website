@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nSzGVMAoWby1XiEcBL+mhTuc9w6M3N5MODsA5Mda7Zk=",
+  "Hash": "Q/BqlgzTf6fJZ97z0Q8UJD9RaB6BmJ0UD2nz8NUd9Rg=",
   "Source": "GalaticoStudios",
   "BasePath": "/",
   "Mode": "Root",
@@ -7053,6 +7053,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/sam/Documents/Projects/Website/wwwroot/GS2.png",
+      "SourceId": "GalaticoStudios",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/sam/Documents/Projects/Website/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "GS2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/GS2.png"
     },
     {
       "Identity": "/home/sam/Documents/Projects/Website/wwwroot/icon-192.png",
