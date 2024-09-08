@@ -12,15 +12,13 @@
     {
         <div class="game-container">
             <h2>@game.Title</h2>
-            
             <div class="game-contents">
                 <div class="description-and-button">
-                    <p class="game-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="game-description">@game.Description</p>
                     <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
                 </div>
                 <iframe width="500" height="300" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-
         </div>
     }
 </div>
@@ -89,14 +87,14 @@
         new Game
         {
             Title = "Galatico",
-            Description = "Galatico is a first person shooter set in the future with portals.",
+            Description = "In the distant future, under the suffocating rule of Galatico, a corporate titan that manipulates the cosmos through its stranglehold on interstellar travel and planetary exploitation, the tale of a fierce uprising begins. A solitary figure known only as Agent emerges from the shadows, their sole aim to dismantle the empire's draconian empire.",
             Url = "https://www.youtube.com/embed/iOm-K8WUV5E?si=vTa4DB7KuE80z9ku",
             UrlText = "Wishlist On Steam"
         },
         new Game
         {
             Title = "Loga Culture",
-            Description = "Loga Culture is a game about a place with rocks.",
+            Description = "The player plays as a 1930's Arachnologist who is uncovering the stories of 4 different stones. This will be an AR experience that goes through different ages in order to uncover the stories of each one",
             Url = "https://www.youtube.com/embed/iOm-K8WUV5E?si=vTa4DB7KuE80z9ku",
             UrlText = "Android or iOS?"
         }
