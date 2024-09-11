@@ -8,26 +8,35 @@
 <hr>
 
 <div class="all-games">
+    @{
+        int index = 0;
+    }
     @foreach (Game game in AllGames)
     {
+        string reverse = index % 2 == 0 ? "flex-direction: row-reverse;" : "";
+
         <div class="game-container">
             <h2>@game.Title</h2>
-            <div class="game-contents">
+            <div class="game-contents" style=@reverse>
                 <div class="description-and-button">
                     <p class="game-description">@game.Description</p>
                     <button class="game-button" @onclick='() => OpenURL(game.Url)'>@game.UrlText</button>
                 </div>
-                <iframe width="500" height="300" src=@game.Url title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="@game.Url" title="Galatico Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+
+        index++;
     }
 </div>
+
 
 <style>
     .all-games {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 24px;
     }
 
     .description-and-button {
@@ -43,6 +52,10 @@
         gap: 12px;
         max-width: 1200px;
         width: 100%;
+    }
+
+    .row-reverse {
+        flex-direction: row-reverse;
     }
 
     .game-contents {
