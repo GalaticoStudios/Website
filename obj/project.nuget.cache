@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1sPo6SHAoZ0=",
+  "dgSpecHash": "U65QCGip8sw=",
   "success": true,
   "projectFilePath": "C:\\Users\\galat\\Documents\\GalaticoStudios\\WebsiteProject\\GalaticoStudios.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\galat\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.32\\microsoft.jsinterop.webassembly.6.0.32.nupkg.sha512",
     "C:\\Users\\galat\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
     "C:\\Users\\galat\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512",
-    "C:\\Users\\galat\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.2\\microsoft.net.sdk.webassembly.pack.9.0.2.nupkg.sha512",
+    "C:\\Users\\galat\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.6\\microsoft.net.sdk.webassembly.pack.9.0.6.nupkg.sha512",
     "C:\\Users\\galat\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\galat\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\galat\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
