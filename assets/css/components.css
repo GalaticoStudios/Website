@@ -54,13 +54,6 @@
   margin-bottom: var(--space-xs);
 }
 
-.kicker::before {
-  content: "";
-  width: 26px;
-  height: 1px;
-  background-color: var(--color-accent);
-}
-
 /* --- Approach cards (pillars) ---------------------------------------------- */
 .approach-grid {
   display: grid;

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Games | Galatico Studios</title>
-  <meta name="description" content="Explore the games from Galatico Studios: Neolithic Trails, Echoes of Avebury, and Tales of Flint - gameplay-first experiences across mobile and AR.">
+  <meta name="description" content="Explore the games from Galatico Studios: Galatico, Neolithic Trails, Echoes of Avebury, and Tales of Flint - gameplay-first experiences across mobile and AR.">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="manifest" href="../site.webmanifest">
 
@@ -23,7 +23,7 @@
   <header class="site-header">
     <div class="container">
       <a href="../index.html" class="site-logo">
-        <img src="../assets/media/logo/logo.png" alt="Galatico Studios logo">
+        <img src="../assets/media/logo/Galatico_Studios_B2B_Logo_White.png" alt="Galatico Studios logo">
         Galatico Studios
       </a>
 
@@ -37,7 +37,7 @@
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="our-games.html" aria-current="page">Our Games</a></li>
-          <li><a href="mailto:inquiries@galaticostudios.co.uk">Contact</a></li>
+          <li><a href="mailto:msmith@galaticostudios.co.uk">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -47,7 +47,7 @@
     <section class="section container">
       <div class="section-heading">
         <h1>Our Games</h1>
-        <p class="games-page-intro">Gameplay-first experiences built around interacting systems, set in and around the ancient landscape of Avebury.</p>
+        <p class="games-page-intro">Gameplay-first experiences built around fun systems interacting. Shoot, explore, and discover!</p>
       </div>
 
       <!-- Cards below are injected by games-data.js via renderGameCards() -->
@@ -71,7 +71,7 @@
             <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
           </svg>
         </a>
-        <a href="mailto:inquiries@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+        <a href="mailto:msmith@galaticostudios.co.uk" aria-label="Email Galatico Studios">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
             <path d="M3 7l9 6 9-6"></path>
@@ -102,10 +102,15 @@
   <script src="../assets/js/games-data.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
   <script src="../assets/js/cookie-consent.js" defer></script>
-  <script defer>
-    // Render every game (no limit) into the full grid.
-    // rootPrefix is "../" because this page lives in Pages/, not the repo root.
-    renderGameCards("all-games", undefined, "../");
+  <script>
+    // `defer` only affects scripts that have a `src` - it has no effect on an
+    // inline script like this one, so we wait for DOMContentLoaded to make
+    // sure games-data.js (loaded above with a real defer) has already run.
+    document.addEventListener("DOMContentLoaded", () => {
+      // Render every game (no limit) into the full grid.
+      // rootPrefix is "../" because this page lives in Pages/, not the repo root.
+      renderGameCards("all-games", undefined, "../");
+    });
   </script>
 </body>
 </html>

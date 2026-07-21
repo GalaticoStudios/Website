@@ -19,6 +19,16 @@
 // fourth game later is just a matter of adding one more object to this array.
 const games = [
   {
+    title: "Galatico",
+    slug: "galatico",
+    tagline: "Boomer Shooter with Portals",
+    description:"Blast your way to the top of GALATICO, a high-tempo movement shooter inspired by the best shooters of the 90s."+ 
+    "Dismantle the gatekeepers of the universe's most powerful technology: Portals."+
+    " Clock-in… it's time to trim the fat from GALATICO.",
+    image: "assets/media/games/Galatico/GALATICO_MainCapsule.png",
+    platforms: ["Mobile"],
+  },
+  {
     title: "Neolithic Trails",
     slug: "neolithic-trails",
     tagline: "Collect items, build a stone family, and rediscover the past.",
@@ -27,7 +37,7 @@ const games = [
       "site of Avebury. Explore the landscape, collect items, build your own " +
       "stone family, and unlock an ever-growing array of achievements that " +
       "keep you moving and invested in your journey through the past.",
-    image: "assets/media/games/neolithic-trails/cover.svg",
+    image: "assets/media/games/neolithic-trails/NeolithicTrialsLogo_NoBackground.png",
     platforms: ["Mobile"],
   },
   {
@@ -39,7 +49,7 @@ const games = [
       "you as a detective investigating a mystery hidden within the ancient " +
       "landscape of Avebury. Explore, gather clues, and help resolve a " +
       "dispute that spans thousands of years.",
-    image: "assets/media/games/echoes-of-avebury/cover.svg",
+    image: "assets/media/games/echoes-of-avebury/EchoesOfAveburyLogo.png",
     platforms: ["Mobile", "AR"],
   },
   {
@@ -51,9 +61,9 @@ const games = [
       "walking pace. Walk the same routes as our ancestors did 5,000 years " +
       "ago, uncovering different tales spanning six different periods of " +
       "time.",
-    image: "assets/media/games/tales-of-flint/cover.svg",
+    image: "assets/media/games/tales-of-flint/tales_of_flint_app_icon_432.png",
     platforms: ["Mobile"],
-  },
+  }
 ];
 
 /**

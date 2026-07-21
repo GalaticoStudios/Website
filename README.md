@@ -77,6 +77,12 @@ Then open `http://localhost:8000` in your browser.
   above the main content, currently just showing a placeholder `poster` image. Add
   the real file to `assets/media/` and uncomment/add a `<source>` tag inside that
   `<video>` element pointing to it.
+- **Company logos**: edit the `logos` array at the top of `assets/js/logos-data.js`
+  to add/remove/replace the companies shown in the auto-scrolling strip between
+  "Our Approach" and "Testimonials" on the homepage. Drop real logo files into
+  `assets/media/logos/` (currently placeholder SVGs) and point each entry's `image`
+  at the new file - the scroll/loop animation is generated automatically, so you
+  don't need to duplicate anything by hand.
 - **Colors/spacing**: the CSS custom properties at the top of `assets/css/base.css`
   control the whole site's color palette, spacing scale, and type scale.
 - **Legal pages**: `Pages/legal-notice.html` and `Pages/terms-and-conditions.html`

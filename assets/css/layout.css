@@ -175,8 +175,26 @@
   margin-bottom: var(--space-xs);
 }
 
+.page-content h3 {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
 .page-content p {
   margin-bottom: var(--space-sm);
+}
+
+/* base.css's reset strips list-style/padding from every <ul> site-wide, so
+   legal-page lists need their own bullets/indent restored here. */
+.page-content ul {
+  list-style: disc;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.page-content li {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
 }
 
 /* --- Footer -------------------------------------------------------------- */

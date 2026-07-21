@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galatico Studios | Independent UK Games Studio</title>
   <meta name="description" content="Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).">
-  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/media/logo/Galatico_Studios_B2B_Logo_Black.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,7 @@
       <div class="hero-inner container">
         <p class="kicker">PC &bull; Mobile &bull; XR</p>
         <h1>Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).</h1>
-        <p>We build worlds where the systems do the storytelling - and the fun comes first.</p>
+        <p>We build games where the systems do the storytelling - and the fun comes first.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="Pages/our-games.html">View Our Games</a>
           <a class="btn btn-secondary" href="mailto:msmith@galaticostudios.co.uk">Get in Touch</a>
@@ -104,6 +104,19 @@
       </div>
     </section>
 
+    <!-- Companies We've Worked With: a horizontally auto-scrolling, looping
+         logo strip. Add/remove logos in the `logos` array in
+         assets/js/logos-data.js - renderLogoScroll() handles duplicating
+         them so the CSS animation loops without a visible jump. -->
+    <section class="logo-scroll-section">
+      <div class="container section-heading">
+        <p class="kicker">People We've Worked With</p>
+      </div>
+      <div class="logo-scroll">
+        <div class="logo-scroll-track" id="logo-scroll-track"></div>
+      </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="section container">
       <div class="section-heading">
@@ -121,7 +134,7 @@
         </blockquote>
         <blockquote class="testimonial-card">
           <p>"The devs actually care about the play experience and pour their love into the level design."</p>
-          <cite>Player review</cite>
+          <cite>Galatico review</cite>
         </blockquote>
       </div>
     </section>
@@ -187,12 +200,23 @@
   </div>
 
   <script src="assets/js/games-data.js" defer></script>
+  <script src="assets/js/logos-data.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/cookie-consent.js" defer></script>
-  <script defer>
-    // Only render the first 3 games as a "featured" preview on the homepage.
-    // rootPrefix is "" because index.html lives at the repo root.
-    renderGameCards("featured-games", 3, "");
+  <script>
+    // `defer` only affects scripts that have a `src` - it does nothing on an
+    // inline script like this one, which otherwise runs immediately as the
+    // parser reaches it (before games-data.js/logos-data.js above have had
+    // a chance to run, even though they appear earlier in the file).
+    // Waiting for DOMContentLoaded guarantees those deferred scripts have
+    // already executed, so renderGameCards()/renderLogoScroll() definitely
+    // exist by the time we call them.
+    document.addEventListener("DOMContentLoaded", () => {
+      // Only render the first 3 games as a "featured" preview on the homepage.
+      // rootPrefix is "" because index.html lives at the repo root.
+      renderGameCards("featured-games", 3, "");
+      renderLogoScroll("logo-scroll-track");
+    });
   </script>
 </body>
 </html>
