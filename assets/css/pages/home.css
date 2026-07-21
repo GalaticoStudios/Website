@@ -7,8 +7,8 @@
 */
 
 /* --- Showreel banner ------------------------------------------------------
-   Sits between the header and <main>. Until a real video file is added, the
-   video's `poster` image (set in the HTML) is all that shows. */
+   Sits between the header and <main>, full-bleed and sized close to a full
+   1920x1080 (16:9) screen. */
 .showreel-banner {
   width: 100%;
   background-color: var(--color-bg);
@@ -18,9 +18,12 @@
 .showreel-video {
   display: block;
   width: 100%;
-  max-height: 70vh;
-  /* object-fit keeps the poster/video filling the box without distorting it,
-     the same way it works on an <img>. */
+  aspect-ratio: 16 / 9;
+  /* Almost full screen height, but capped so it never taller than the
+     viewport (e.g. on narrow/tall phone screens where 100%-width * 16:9
+     would otherwise overshoot). object-fit crops to fill either way, so
+     this never letterboxes or distorts the footage. */
+  max-height: 92vh;
   object-fit: cover;
   background-color: var(--color-surface);
 }

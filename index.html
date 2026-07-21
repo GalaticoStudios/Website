@@ -23,7 +23,7 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="site-logo">
-        <img src="assets/media/logo/logo.png" alt="Galatico Studios logo">
+        <img src="assets/media/logo/Galatico_Studios_B2B_Logo_White.png" alt="Galatico Studios logo">
         Galatico Studios
       </a>
 
@@ -43,12 +43,24 @@
     </div>
   </header>
 
-  <!-- Showreel banner: no real footage yet, so the poster image (a game
-       cover) shows until a <source> is added inside the <video> tag below. -->
+  <!-- Showreel banner: plays like a silent, looping GIF - no controls, no
+       audio, no way for the visitor to pause/stop it. `muted` is required
+       for `autoplay` to be allowed by the browser at all; `playsinline`
+       stops iOS from forcing it into fullscreen. `poster` is the fallback
+       image shown before the video has loaded (or if autoplay is blocked
+       for some reason). -->
   <section class="showreel-banner">
-    <video class="showreel-video" poster="assets/media/games/echoes-of-avebury/cover.svg" controls muted loop playsinline>
-      <!-- TODO: once the showreel file is ready, add e.g.:
-           <source src="assets/media/showreel.mp4" type="video/mp4"> -->
+    <video
+      class="showreel-video"
+      poster="assets/media/games/Galatico/Screenshot 2026-02-26 223201.png"
+      autoplay
+      muted
+      loop
+      playsinline
+      disablePictureInPicture
+      disableRemotePlayback
+    >
+      <source src="assets/media/games/Galatico/GalaticoTrailer_2026-04-27.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
@@ -60,7 +72,7 @@
          centered on top of it. -->
     <section class="hero">
       <div class="hero-inner container">
-        <p class="kicker">PC &bull; Mobile &bull; Augmented Reality</p>
+        <p class="kicker">PC &bull; Mobile &bull; XR</p>
         <h1>Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).</h1>
         <p>We build worlds where the systems do the storytelling - and the fun comes first.</p>
         <div class="hero-actions">
@@ -78,17 +90,14 @@
       </div>
       <div class="approach-grid">
         <article class="approach-card">
-          <span class="approach-card-icon" aria-hidden="true">S</span>
           <h3>System Driven Design</h3>
           <p>We build gameplay-first experiences around interacting systems, letting narrative emerge naturally through play rather than being bolted on top of it.</p>
         </article>
         <article class="approach-card">
-          <span class="approach-card-icon" aria-hidden="true">C</span>
           <h3>Collaborative Development</h3>
           <p>We collaborate closely with our clients while taking full ownership of the software development, so our partners can focus on their research, content, or organisation.</p>
         </article>
         <article class="approach-card">
-          <span class="approach-card-icon" aria-hidden="true">F</span>
           <h3>Follow the Fun</h3>
           <p>We put user enjoyment first, listening closely to players to create meaningful, enjoyable experiences from start to finish.</p>
         </article>
