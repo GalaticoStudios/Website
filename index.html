@@ -8,6 +8,10 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="manifest" href="site.webmanifest">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -33,22 +37,35 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="Pages/our-games.html">Our Games</a></li>
-          <li><a href="mailto:inquiries@galaticostudios.co.uk">Contact</a></li>
+          <li><a href="mailto:msmith@galaticostudios.co.uk">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Showreel banner: no real footage yet, so the poster image (a game
+       cover) shows until a <source> is added inside the <video> tag below. -->
+  <section class="showreel-banner">
+    <video class="showreel-video" poster="assets/media/games/echoes-of-avebury/cover.svg" controls muted loop playsinline>
+      <!-- TODO: once the showreel file is ready, add e.g.:
+           <source src="assets/media/showreel.mp4" type="video/mp4"> -->
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
   <main id="main-content">
-    <!-- Hero -->
-    <section class="hero container">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">PC &bull; Mobile &bull; Augmented Reality</p>
+    <!-- Hero: .hero is full-width so its background texture stretches edge
+         to edge on every screen size; .hero-inner (which also gets
+         .container's max-width/padding) keeps the actual text narrower and
+         centered on top of it. -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <p class="kicker">PC &bull; Mobile &bull; Augmented Reality</p>
         <h1>Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).</h1>
         <p>We build worlds where the systems do the storytelling - and the fun comes first.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="Pages/our-games.html">View Our Games</a>
-          <a class="btn btn-secondary" href="mailto:inquiries@galaticostudios.co.uk">Get in Touch</a>
+          <a class="btn btn-secondary" href="mailto:msmith@galaticostudios.co.uk">Get in Touch</a>
         </div>
       </div>
     </section>
@@ -56,19 +73,22 @@
     <!-- Our Approach -->
     <section class="section container">
       <div class="section-heading">
-        <h2>Our Approach</h2>
-        <p>Three principles guide every project we take on.</p>
+        <p class="kicker">Our Approach</p>
+        <h2>How we build.</h2>
       </div>
       <div class="approach-grid">
         <article class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">S</span>
           <h3>System Driven Design</h3>
           <p>We build gameplay-first experiences around interacting systems, letting narrative emerge naturally through play rather than being bolted on top of it.</p>
         </article>
         <article class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">C</span>
           <h3>Collaborative Development</h3>
           <p>We collaborate closely with our clients while taking full ownership of the software development, so our partners can focus on their research, content, or organisation.</p>
         </article>
         <article class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">F</span>
           <h3>Follow the Fun</h3>
           <p>We put user enjoyment first, listening closely to players to create meaningful, enjoyable experiences from start to finish.</p>
         </article>
@@ -78,7 +98,8 @@
     <!-- Testimonials -->
     <section class="section container">
       <div class="section-heading">
-        <h2>What People Say</h2>
+        <p class="kicker">Testimonials</p>
+        <h2>What people say.</h2>
       </div>
       <div class="testimonial-grid">
         <blockquote class="testimonial-card">
@@ -99,8 +120,8 @@
     <!-- Featured Games -->
     <section class="section container">
       <div class="section-heading">
+        <p class="kicker">Our Games</p>
         <h2>Featured Games</h2>
-        <p>A look at what we're building right now.</p>
       </div>
       <!-- Cards below are injected by games-data.js via renderGameCards() -->
       <div class="featured-games-grid" id="featured-games"></div>
@@ -126,7 +147,7 @@
             <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
           </svg>
         </a>
-        <a href="mailto:inquiries@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+        <a href="mailto:msmith@galaticostudios.co.uk" aria-label="Email Galatico Studios">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
             <path d="M3 7l9 6 9-6"></path>

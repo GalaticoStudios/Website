@@ -83,12 +83,13 @@ function createGameCard(game, rootPrefix) {
 
   card.innerHTML = `
     <img src="${rootPrefix}${game.image}" alt="${game.title} cover art" loading="lazy">
+    <span class="arrow-chip" aria-hidden="true">&rarr;</span>
     <div class="game-card-body">
       <h3>${game.title}</h3>
       <p class="game-card-tagline">${game.tagline}</p>
       <p class="game-card-description">${game.description}</p>
       <div class="platform-tags">${platformTagsHtml}</div>
-      <a class="btn btn-secondary" href="${rootPrefix}Pages/our-games.html#${game.slug}">Learn more</a>
+      <a class="btn btn-secondary" href="${rootPrefix}Pages/our-games.html#${game.slug}"><span>Learn more</span></a>
     </div>
   `;
 

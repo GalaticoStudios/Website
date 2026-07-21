@@ -73,6 +73,10 @@ Then open `http://localhost:8000` in your browser.
 - **Game images/gifs/video**: drop files into `assets/media/games/<slug>/`, then
   update the `image` path for that game in `games-data.js` (currently placeholder
   SVGs - swap these for real artwork/screenshots/clips).
+- **Showreel video**: `index.html` has a `<video class="showreel-video">` banner
+  above the main content, currently just showing a placeholder `poster` image. Add
+  the real file to `assets/media/` and uncomment/add a `<source>` tag inside that
+  `<video>` element pointing to it.
 - **Colors/spacing**: the CSS custom properties at the top of `assets/css/base.css`
   control the whole site's color palette, spacing scale, and type scale.
 - **Legal pages**: `Pages/legal-notice.html` and `Pages/terms-and-conditions.html`

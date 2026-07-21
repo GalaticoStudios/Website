@@ -73,26 +73,29 @@ button {
    whole site, instead of hunting through every file.
 ------------------------------------------------------------------------ */
 :root {
-  /* Colors: dark, slightly warm theme. The accent (copper/terracotta) nods
-     to the ancient-stone/Avebury setting of the studio's games. */
-  --color-bg: #0b0d10;
-  --color-bg-alt: #13161b;
-  --color-surface: #1a1e25;
-  --color-surface-raised: #212630;
-  --color-border: #2b303a;
+  /* Colors: near-black theme with a single bright teal accent used
+     consistently for links, tags, and highlights. */
+  --color-bg: #0a0b0d;
+  --color-bg-alt: #121317;
+  --color-surface: #121317;
+  --color-surface-raised: #17181d;
+  --color-border: #232529;
 
-  --color-text: #eceef1;
-  --color-text-muted: #a2a9b4;
+  --color-text: #f4f5f7;
+  --color-text-muted: #9a9ea6;
 
-  --color-accent: #d97a3d;
-  --color-accent-hover: #e8925c;
-  --color-accent-2: #4fb8a6;
+  --color-accent: #2fe3ff;
+  --color-accent-hover: #6aecff;
+  --color-accent-2: #2fe3ff;
+  --color-accent-soft: rgba(47, 227, 255, 0.14);
 
   --color-focus: #6fc6ff;
 
-  /* Type scale */
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-heading: var(--font-body);
+  /* Type scale. Space Grotesk/Inter are loaded via Google Fonts <link> tags
+     in each page's <head> - the system-font fallbacks keep the page usable
+     if that request fails (e.g. no internet when opened via file://). */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Space Grotesk", var(--font-body);
 
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
@@ -110,8 +113,8 @@ button {
   --space-xl: 4rem;
   --space-2xl: 6rem;
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
 
   --max-width: 1200px;
 }
@@ -135,7 +138,8 @@ h3,
 h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 h1 {
