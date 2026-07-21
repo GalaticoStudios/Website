@@ -44,25 +44,23 @@
   </header>
 
   <!-- Showreel banner: plays like a silent, looping GIF - no controls, no
-       audio, no way for the visitor to pause/stop it. `muted` is required
-       for `autoplay` to be allowed by the browser at all; `playsinline`
-       stops iOS from forcing it into fullscreen. `poster` is the fallback
-       image shown before the video has loaded (or if autoplay is blocked
-       for some reason). -->
+       audio, no way for the visitor to pause/stop it. YouTube params do the
+       same job the old <video> attributes did (autoplay+mute so the browser
+       allows autoplay, loop, no controls/branding/related videos); `playlist`
+       repeating the video ID is required by YouTube for `loop` to work on a
+       single video. `pointer-events: none` on the wrapper (see home.css)
+       blocks clicks so visitors can't pause it or jump to YouTube. -->
   <section class="showreel-banner">
-    <video
-      class="showreel-video"
-      poster="assets/media/games/Galatico/Screenshot 2026-02-26 223201.png"
-      autoplay
-      muted
-      loop
-      playsinline
-      disablePictureInPicture
-      disableRemotePlayback
-    >
-      <source src="assets/media/games/Galatico/GalaticoTrailer_2026-04-27.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="showreel-video-wrap">
+      <iframe
+        class="showreel-video"
+        src="https://www.youtube-nocookie.com/embed/whuB1IYX6Ms?autoplay=1&mute=1&loop=1&playlist=whuB1IYX6Ms&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1"
+        title="Galatico Studios showreel"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
   </section>
 
   <main id="main-content">
