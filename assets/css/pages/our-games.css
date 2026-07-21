@@ -1,0 +1,25 @@
+/*
+  our-games.css
+  -------------
+  Styling specific to our-games.html: the full games grid page intro and
+  layout tweaks for a larger card grid than the homepage preview.
+*/
+
+.games-page-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto var(--space-lg);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* The "Learn more" button in each card links to our-games.html, which is
+   this page - so on the full grid it would just be a no-op link back to
+   itself. Hide it here; it still shows up in the homepage preview. */
+.games-grid .game-card-body .btn {
+  display: none;
+}

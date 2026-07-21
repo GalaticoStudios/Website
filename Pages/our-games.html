@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Games | Galatico Studios</title>
+  <meta name="description" content="Explore the games from Galatico Studios: Neolithic Trails, Echoes of Avebury, and Tales of Flint - gameplay-first experiences across mobile and AR.">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/our-games.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/media/logo/logo.png" alt="Galatico Studios logo">
+        Galatico Studios
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="our-games.html" aria-current="page">Our Games</a></li>
+          <li><a href="mailto:inquiries@galaticostudios.co.uk">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section container">
+      <div class="section-heading">
+        <h1>Our Games</h1>
+        <p class="games-page-intro">Gameplay-first experiences built around interacting systems, set in and around the ancient landscape of Avebury.</p>
+      </div>
+
+      <!-- Cards below are injected by games-data.js via renderGameCards() -->
+      <div class="games-grid" id="all-games"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-social">
+        <a href="https://instagram.com/galaticostudiosofficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@GalaticoStudiosOfficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+            <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
+          </svg>
+        </a>
+        <a href="mailto:inquiries@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="footer-legal" aria-label="Legal">
+        <ul>
+          <li><a href="legal-notice.html">Legal Notice</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="footer-bottom">&copy; <span class="current-year"></span> Galatico Studios Ltd. All rights reserved.</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We use minimal cookies to remember your preferences. No tracking, no third-party ads.</p>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-secondary" id="cookie-decline" type="button">Decline</button>
+      <button class="btn btn-primary" id="cookie-accept" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/games-data.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/cookie-consent.js" defer></script>
+  <script defer>
+    // Render every game (no limit) into the full grid.
+    // rootPrefix is "../" because this page lives in Pages/, not the repo root.
+    renderGameCards("all-games", undefined, "../");
+  </script>
+</body>
+</html>

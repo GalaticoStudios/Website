@@ -1,0 +1,48 @@
+/*
+  home.css
+  --------
+  Styling specific to index.html: the hero banner and the featured-games
+  section layout. Shared pieces (cards, buttons, testimonials) live in
+  components.css.
+*/
+
+.hero {
+  padding-block: var(--space-2xl) var(--space-xl);
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+.hero-eyebrow {
+  color: var(--color-accent-2);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-md);
+}
+
+.hero p {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-lg);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.featured-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
