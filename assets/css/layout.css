@@ -1,0 +1,259 @@
+/*
+  layout.css
+  ----------
+  Structural layout: header/nav, footer, page containers and grids.
+  Component-level styling (buttons, cards, etc.) lives in components.css.
+*/
+
+/* --- Container --------------------------------------------------------
+   A reusable centered container so every section lines up consistently. */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-sm);
+}
+
+/* --- Skip link ----------------------------------------------------------
+   Lets keyboard/screen-reader users jump past the nav straight to the main
+   content. Hidden until it receives focus. */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-sm);
+  background: var(--color-accent);
+  color: #14100c;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
+}
+
+/* --- Site header / navigation ------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 11, 13, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-xs);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.site-logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Mobile nav toggle ("hamburger") button - hidden on wider screens.
+   Its open/closed state is toggled by main.js, which adds/removes the
+   `is-open` class on .main-nav and updates aria-expanded on this button. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text);
+  border-radius: 2px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.main-nav a {
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .main-nav.is-open {
+    max-height: 300px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: var(--space-sm);
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: var(--space-xs) 0;
+  }
+}
+
+/* --- Generic page sections ---------------------------------------------- */
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading p {
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-top: var(--space-xs);
+}
+
+/* Simple content page wrapper for legal/placeholder pages */
+.page-content {
+  max-width: 70ch;
+  margin-inline: auto;
+  padding-block: var(--space-xl);
+}
+
+.page-content h1 {
+  margin-bottom: var(--space-md);
+}
+
+.page-content h2 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.page-content h3 {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.page-content p {
+  margin-bottom: var(--space-sm);
+}
+
+/* base.css's reset strips list-style/padding from every <ul> site-wide, so
+   legal-page lists need their own bullets/indent restored here. */
+.page-content ul {
+  list-style: disc;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.page-content li {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+/* --- Footer -------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.footer-social a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.footer-legal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-legal a {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-legal a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  text-align: center;
+}

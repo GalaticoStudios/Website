@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title">
+  <title id="title">Tales of Flint placeholder cover image</title>
+  <rect width="800" height="450" fill="#1a1e25"/>
+  <rect x="0" y="0" width="800" height="450" fill="none" stroke="#2b303a" stroke-width="2"/>
+  <path d="M340 130 L460 130 L420 230 L460 230 L360 340 L390 250 L340 250 Z" fill="none" stroke="#d97a3d" stroke-width="6" stroke-linejoin="round"/>
+  <text x="400" y="380" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#eceef1" text-anchor="middle">Tales of Flint</text>
+  <text x="400" y="410" font-family="system-ui, sans-serif" font-size="16" fill="#a2a9b4" text-anchor="middle">Replace with real artwork</text>
+</svg>

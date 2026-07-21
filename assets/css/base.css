@@ -1,0 +1,183 @@
+/*
+  base.css
+  --------
+  Global reset, CSS custom properties (design tokens), and base typography.
+  Every other stylesheet builds on top of the variables defined here, so if
+  you want to re-theme the site later, this is the file to edit.
+*/
+
+/* --- Reset ---------------------------------------------------------- */
+/* A small, modern reset. We are not using a big third-party reset because
+   the brief says "no frameworks" - this covers the common gotchas. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Respect users who have asked their OS to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Design tokens ---------------------------------------------------
+   CSS custom properties ("CSS variables") let us define a value once and
+   reuse it everywhere. Changing a color or spacing value here updates the
+   whole site, instead of hunting through every file.
+------------------------------------------------------------------------ */
+:root {
+  /* Colors: near-black theme with a single bright teal accent used
+     consistently for links, tags, and highlights. */
+  --color-bg: #0a0b0d;
+  --color-bg-alt: #121317;
+  --color-surface: #121317;
+  --color-surface-raised: #17181d;
+  --color-border: #232529;
+
+  --color-text: #f4f5f7;
+  --color-text-muted: #9a9ea6;
+
+  --color-accent: #2fe3ff;
+  --color-accent-hover: #6aecff;
+  --color-accent-2: #2fe3ff;
+  --color-accent-soft: rgba(47, 227, 255, 0.14);
+
+  --color-focus: #6fc6ff;
+
+  /* Type scale. Space Grotesk/Inter are loaded via Google Fonts <link> tags
+     in each page's <head> - the system-font fallbacks keep the page usable
+     if that request fails (e.g. no internet when opened via file://). */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Space Grotesk", var(--font-body);
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+
+  /* Spacing scale, used for margin/padding/gap so spacing stays consistent */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --max-width: 1200px;
+}
+
+/* --- Base typography -------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* Visible focus states for keyboard users - required for accessibility.
+   Do not remove the outline without replacing it with something equally
+   visible. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Utility class for visually hiding content while keeping it available to
+   screen readers (used for skip links / labels). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

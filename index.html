@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galatico Studios | Independent UK Games Studio</title>
+  <meta name="description" content="Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).">
+  <link rel="icon" href="assets/media/logo/Galatico_Studios_B2B_Logo_Black.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <img src="assets/media/logo/Galatico_Studios_B2B_Logo_White.png" alt="Galatico Studios logo">
+        Galatico Studios
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="Pages/our-games.html">Our Games</a></li>
+          <li><a href="mailto:msmith@galaticostudios.co.uk">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Showreel banner: plays like a silent, looping GIF - no controls, no
+       audio, no way for the visitor to pause/stop it. `muted` is required
+       for `autoplay` to be allowed by the browser at all; `playsinline`
+       stops iOS from forcing it into fullscreen. `poster` is the fallback
+       image shown before the video has loaded (or if autoplay is blocked
+       for some reason). -->
+  <section class="showreel-banner">
+    <video
+      class="showreel-video"
+      poster="assets/media/games/Galatico/Screenshot 2026-02-26 223201.png"
+      autoplay
+      muted
+      loop
+      playsinline
+      disablePictureInPicture
+      disableRemotePlayback
+    >
+      <source src="assets/media/games/Galatico/GalaticoTrailer_2026-04-27.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <main id="main-content">
+    <!-- Hero: .hero is full-width so its background texture stretches edge
+         to edge on every screen size; .hero-inner (which also gets
+         .container's max-width/padding) keeps the actual text narrower and
+         centered on top of it. -->
+    <section class="hero">
+      <div class="hero-inner container">
+        <p class="kicker">PC &bull; Mobile &bull; XR</p>
+        <h1>Galatico Studios is an independent UK games studio delivering gameplay-first, systems-driven experiences across PC, mobile and augmented reality (AR).</h1>
+        <p>We build games where the systems do the storytelling - and the fun comes first.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="Pages/our-games.html">View Our Games</a>
+          <a class="btn btn-secondary" href="mailto:msmith@galaticostudios.co.uk">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">Our Approach</p>
+        <h2>How we build.</h2>
+      </div>
+      <div class="approach-grid">
+        <article class="approach-card">
+          <h3>System Driven Design</h3>
+          <p>We build gameplay-first experiences around interacting systems, letting narrative emerge naturally through play rather than being bolted on top of it.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Collaborative Development</h3>
+          <p>We collaborate closely with our clients while taking full ownership of the software development, so our partners can focus on their research, content, or organisation.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Follow the Fun</h3>
+          <p>We put user enjoyment first, listening closely to players to create meaningful, enjoyable experiences from start to finish.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Companies We've Worked With: a horizontally auto-scrolling, looping
+         logo strip. Add/remove logos in the `logos` array in
+         assets/js/logos-data.js - renderLogoScroll() handles duplicating
+         them so the CSS animation loops without a visible jump. -->
+    <section class="logo-scroll-section">
+      <div class="container section-heading">
+        <p class="kicker">People We've Worked With</p>
+      </div>
+      <div class="logo-scroll">
+        <div class="logo-scroll-track" id="logo-scroll-track"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">Testimonials</p>
+        <h2>What people say.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <blockquote class="testimonial-card">
+          <p>"Most studios offer a set window for delivery and pack up as soon as the time expires. With Galatico, you get the opposite."</p>
+          <cite>Jack Brett, Bournemouth University</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"It took away all of the pressure of implementing, designing, and delivering it ourselves, allowing us to focus on the design aspects."</p>
+          <cite>Dr David Millard, Southampton University</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"The devs actually care about the play experience and pour their love into the level design."</p>
+          <cite>Galatico review</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">Our Games</p>
+        <h2>Featured Games</h2>
+      </div>
+      <!-- Cards below are injected by games-data.js via renderGameCards() -->
+      <div class="featured-games-grid" id="featured-games"></div>
+      <div class="section-heading" style="margin-top: var(--space-lg); margin-bottom: 0;">
+        <a class="btn btn-secondary" href="Pages/our-games.html">See All Games</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-social">
+        <a href="https://instagram.com/galaticostudiosofficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@GalaticoStudiosOfficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+            <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
+          </svg>
+        </a>
+        <a href="mailto:msmith@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="footer-legal" aria-label="Legal">
+        <ul>
+          <li><a href="Pages/legal-notice.html">Legal Notice</a></li>
+          <li><a href="Pages/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="Pages/terms-and-conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="footer-bottom">&copy; <span class="current-year"></span> Galatico Studios Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- Cookie consent banner: hidden by default, shown by cookie-consent.js
+       on a visitor's first visit. See assets/js/cookie-consent.js -->
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We use minimal cookies to remember your preferences. No tracking, no third-party ads.</p>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-secondary" id="cookie-decline" type="button">Decline</button>
+      <button class="btn btn-primary" id="cookie-accept" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="assets/js/games-data.js" defer></script>
+  <script src="assets/js/logos-data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/cookie-consent.js" defer></script>
+  <script>
+    // `defer` only affects scripts that have a `src` - it does nothing on an
+    // inline script like this one, which otherwise runs immediately as the
+    // parser reaches it (before games-data.js/logos-data.js above have had
+    // a chance to run, even though they appear earlier in the file).
+    // Waiting for DOMContentLoaded guarantees those deferred scripts have
+    // already executed, so renderGameCards()/renderLogoScroll() definitely
+    // exist by the time we call them.
+    document.addEventListener("DOMContentLoaded", () => {
+      // Only render the first 3 games as a "featured" preview on the homepage.
+      // rootPrefix is "" because index.html lives at the repo root.
+      renderGameCards("featured-games", 3, "");
+      renderLogoScroll("logo-scroll-track");
+    });
+  </script>
+</body>
+</html>
