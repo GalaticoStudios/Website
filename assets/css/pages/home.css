@@ -15,17 +15,53 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.showreel-video {
-  display: block;
+.showreel-video-wrap {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   /* Almost full screen height, but capped so it never taller than the
      viewport (e.g. on narrow/tall phone screens where 100%-width * 16:9
-     would otherwise overshoot). object-fit crops to fill either way, so
-     this never letterboxes or distorts the footage. */
+     would otherwise overshoot). */
   max-height: 92vh;
-  object-fit: cover;
+  overflow: hidden;
   background-color: var(--color-surface);
+  /* No pointer events reach the embed at all - visitor can't click to pause
+     it or click through to YouTube, matching the old <video>'s behaviour. */
+  pointer-events: none;
+}
+
+.showreel-video {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  /* object-fit isn't reliably supported on <iframe> across browsers, so crop
+     the same way object-fit: cover would by oversizing the iframe to always
+     cover its 16:9 box and re-centering it. */
+  width: 100%;
+  height: 100%;
+  min-width: 177.78vh;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+}
+
+/* Sits above the iframe and hides its buffering/quality-ramp-up state.
+   showreel.js removes .is-hidden once the stream has had time to reach full
+   quality; the fade covers the handoff so it isn't a jarring cut. */
+.showreel-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+
+.showreel-poster.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* The hero uses two layered pseudo-elements for its background texture
