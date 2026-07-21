@@ -46,6 +46,24 @@
   transform: translate(-50%, -50%);
 }
 
+/* Sits above the iframe and hides its buffering/quality-ramp-up state.
+   showreel.js removes .is-hidden once the stream has had time to reach full
+   quality; the fade covers the handoff so it isn't a jarring cut. */
+.showreel-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+
+.showreel-poster.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* The hero uses two layered pseudo-elements for its background texture
    instead of extra empty <div>s in the HTML:
      ::before - a slowly-hue-shifting radial gradient (the moody backdrop)
