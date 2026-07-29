@@ -17,6 +17,8 @@ const logos = [
   { name: "University of Southampton", image: "assets/media/logos/University_of_Southampton_Logo.png" },
   { name: "National Trust", image: "assets/media/logos/national-trust-logo.png" },
   {name: "Derailed Technologies", image: "assets/media/logos/ARTS SIDE@3x.png"},
+  {name: "Lava Lantern Studios", image: "assets/media/logos/LLS_YT_Logo_Transparent_BlackOrange_Text.png"},
+  {name: "SnackBox Games", image: "assets/media/logos/Snackbox_Logo_Orange.png"},
 ];
 
 // With only a handful of logos, one pass through the `logos` array is
