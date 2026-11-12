@@ -16,7 +16,7 @@ sitemap.xml                   Search engine sitemap
 
 Pages/
   our-games.html               Full games grid
-  services.html                Services offered (static content, edit the HTML directly)
+  services.html                Services explorer (edit each service's tab + panel in the HTML)
   legal-notice.html            Placeholder legal page
   privacy-policy.html          Privacy policy
   terms-and-conditions.html    Placeholder terms page
@@ -34,6 +34,7 @@ assets/
     main.js                   Mobile nav toggle + footer copyright year
     cookie-consent.js         Cookie/privacy notice banner (localStorage-backed)
     games-data.js             Game data array + card-rendering function
+    services.js               Services page: tabs, scroll reveals, animated visuals
   media/
     logo/                     Studio logo
     games/                    Per-game images/gifs/video (currently placeholder SVGs -

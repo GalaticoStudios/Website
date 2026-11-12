@@ -1,103 +1,685 @@
 /*
   services.css
   ------------
-  Styling specific to Pages/services.html: the service cards grid, the
-  "How We Work" process steps and the closing call-to-action panel.
+  Styling specific to Pages/services.html: the hero with its rotating word,
+  the service explorer (tab list + detail panel), the animated visuals shown
+  in each panel, the "How We Work" stepper and the closing call to action.
+  Behaviour (tabs, typing terminal, consultancy chat) lives in
+  assets/js/services.js.
 */
 
-.services-intro {
-  text-align: center;
-  max-width: 60ch;
-  margin: var(--space-sm) auto 0;
-}
-
-/* --- Service cards ---------------------------------------------------------- */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-  gap: var(--space-md);
-}
-
-.service-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  /* Keeps the card clear of the sticky header when linked to via #anchor */
-  scroll-margin-top: 6rem;
-}
-
-.service-card-icon {
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--fs-sm);
-  letter-spacing: 0.14em;
-}
-
-.service-card h2 {
-  font-size: var(--fs-lg);
-  color: var(--color-text);
-}
-
-.service-card-lead {
-  color: var(--color-text);
-}
-
-/* Bullets are drawn with a small accent dash since base.css strips the
-   default list markers site-wide. */
-.service-card-list {
+.svc-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
-  flex-grow: 1;
 }
 
-.service-card-list li {
+.svc-list li {
   position: relative;
   padding-left: 1.25rem;
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
 }
 
-.service-card-list li::before {
+.svc-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 0.6rem;
+  top: .7em;
+  width: .6rem;
   height: 2px;
-  background-color: var(--color-accent);
+  background: var(--color-accent);
 }
 
-/* --- How We Work -------------------------------------------------------------
-   Reuses .approach-card / .approach-card-icon from components.css; this just
-   lays the four steps out in a row. */
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-md);
-}
-
-/* --- Call to action ---------------------------------------------------------- */
-.services-cta {
+.p-cta {
   text-align: center;
-  background-color: var(--color-surface);
+  background: radial-gradient(ellipse at 50% 0%, rgba(47,227,255,.16), transparent 70%), var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-xl) var(--space-md);
 }
 
-.services-cta h2 {
+.p-cta h2 {
   font-size: var(--fs-xl);
   margin-bottom: var(--space-xs);
 }
 
-.services-cta p {
+.p-cta p {
   max-width: 50ch;
   margin: 0 auto var(--space-md);
+}
+
+/* Reveal on scroll: only hidden once JS has confirmed it's running */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Visuals */
+.viz {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  aspect-ratio: 16/10;
+}
+
+.viz-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The Galatico capsule's title sits close to its left edge, so nudge the
+   crop 25px right to keep the whole logo in view. */
+#panel-game-development .viz-img img {
+  object-position: calc(50% + 25px) 50%;
+}
+
+.viz-ar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 60%, rgba(47,227,255,.18), transparent 60%), var(--color-surface-raised);
+}
+
+.ar-phone {
+  height: 94%;
+  aspect-ratio: 9/20;
+  border: 3px solid #2a2d33;
+  border-radius: 22px;
+  padding: 6px;
+  background: #000;
+  box-shadow: 0 20px 40px rgba(0,0,0,.5);
+}
+
+.ar-screen {
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ar-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ar-reticle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  animation: ar-pulse 2.4s ease-in-out infinite;
+}
+
+.ar-label {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  translate: -50% 0;
+  background: var(--color-accent);
+  color: #0a0b0d;
+  font-size: .7rem;
+  font-weight: 700;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  animation: ar-pop 2.4s ease-in-out infinite;
+}
+
+@keyframes ar-pulse {
+  0%,100% {
+    scale: 1;
+    opacity: .9;
+  }
+  50% {
+    scale: 1.15;
+    opacity: .4;
+  }
+}
+
+@keyframes ar-pop {
+  0%,40% {
+    opacity: 0;
+    translate: -50% 6px;
+  }
+  55%,100% {
+    opacity: 1;
+    translate: -50% 0;
+  }
+}
+
+.viz-map svg {
+  width: 100%;
+  height: 100%;
+}
+
+.map-route {
+  animation: route-dash 1.2s linear infinite;
+}
+
+@keyframes route-dash {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.map-pin circle:first-child {
+  fill: rgba(47,227,255,.25);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pin-ping 2.4s ease-out infinite;
+  animation-delay: var(--d);
+}
+
+.map-pin circle:last-child {
+  fill: var(--color-accent);
+}
+
+@keyframes pin-ping {
+  0% {
+    scale: .4;
+    opacity: 1;
+  }
+  100% {
+    scale: 2.2;
+    opacity: 0;
+  }
+}
+
+.map-logos {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.map-logos img {
+  height: 44px;
+  width: auto;
+  border-radius: 8px;
+  background: rgba(10,11,13,.7);
+  padding: 4px;
+}
+
+.viz-term {
+  display: flex;
+  flex-direction: column;
+  background: #07080a;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+.term-bar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: .6rem .8rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.term-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2a2d33;
+}
+
+.term-bar em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: .7rem;
+  color: var(--color-text-muted);
+}
+
+.term-body {
+  flex: 1;
+  margin: 0;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--color-text);
+}
+
+.t-in {
+  color: var(--color-accent);
+}
+
+.t-sys {
+  color: #7d828c;
+}
+
+.t-out {
+  color: var(--color-text);
+}
+
+.term-body.typing::after {
+  content: "\2588";
+  color: var(--color-accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.term-note {
+  font-size: .7rem;
+  padding: .5rem 1rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-accent);
+}
+
+.viz-code {
+  background: #07080a;
+  display: flex;
+  align-items: center;
+}
+
+.viz-code pre {
+  margin: 0;
+  padding: 1.2rem;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: .78rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.c-k {
+  color: #c792ea;
+}
+
+.c-f {
+  color: var(--color-accent);
+}
+
+.c-s {
+  color: #c3e88d;
+}
+
+.c-t {
+  color: #ffcb6b;
+}
+
+.viz-consult {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(47,227,255,.14), transparent 60%), var(--color-surface-raised);
+}
+
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 84%;
+}
+
+.qa {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.qa p {
+  max-width: 85%;
+  padding: .5rem .9rem;
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+.qa-q {
+  align-self: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px 14px 14px 2px;
+  color: var(--color-text);
+}
+
+.qa-a {
+  align-self: flex-end;
+  background: var(--color-accent);
+  border-radius: 14px 14px 2px 14px;
+  color: #0a0b0d;
+  font-weight: 500;
+}
+
+/* With JS, show one conversation at a time: question, typing dots, answer. */
+.js .qa-list {
+  display: grid;
+}
+
+.js .qa {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.js .qa.on {
+  opacity: 1;
+}
+
+.js .qa .qa-q, .js .qa .qa-a {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.js .qa.show-q .qa-q, .js .qa.show-a .qa-a {
+  opacity: 1;
+  transform: none;
+}
+
+.js .qa.typing .qa-a {
+  opacity: 1;
+  transform: none;
+  color: transparent;
+  position: relative;
+}
+
+.js .qa.typing .qa-a::after {
+  content: "222";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0b0d;
+  letter-spacing: .2em;
+  animation: blink 1s steps(2) infinite;
+}
+
+.ex-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-2xl) var(--space-lg);
+  text-align: center;
+}
+
+.ex-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(244,245,247,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,245,247,.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%);
+}
+
+.ex-hero .container {
+  position: relative;
+}
+
+.ex-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.rotator {
+  display: inline-block;
+  color: var(--color-accent);
+  min-width: 6ch;
+  text-align: left;
+}
+
+.rot-word {
+  display: inline-block;
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.rot-word.out {
+  opacity: 0;
+  transform: translateY(-.4em);
+}
+
+.ex-intro {
+  max-width: 58ch;
+  margin: var(--space-md) auto 0;
+}
+
+.explorer {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: var(--space-md);
+}
+
+.ex-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ex-tab {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  text-align: left;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: color .2s, border-color .2s, background .2s, transform .2s;
+}
+
+.ex-tab:hover {
+  color: var(--color-text);
+  transform: translateX(4px);
+}
+
+.ex-tab[aria-selected="true"] {
+  color: var(--color-text);
+  border-color: rgba(47,227,255,.5);
+  background: linear-gradient(90deg, rgba(47,227,255,.12), var(--color-surface));
+}
+
+.ex-num {
+  color: var(--color-accent);
+  font-size: .8rem;
+  letter-spacing: .1em;
+}
+
+.ex-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+}
+
+.ex-tab[aria-selected="true"] .ex-bar.run {
+  animation: ex-progress var(--cycle) linear forwards;
+}
+
+@keyframes ex-progress {
+  to {
+    width: 100%;
+  }
+}
+
+.ex-panels {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  min-height: 100%;
+}
+
+.ex-panels::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgba(47,227,255,.10), transparent 40%);
+}
+
+.ex-panel {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+  animation: panel-in .45s ease;
+}
+
+.ex-panel[hidden] {
+  display: none;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ex-panel:has(.viz-ar) {
+  align-items: stretch;
+}
+
+.ex-panel .viz-ar {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 460px;
+}
+
+.ex-panel .viz-ar .ar-phone {
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  left: 50%;
+  translate: -50% 0;
+  height: auto;
+}
+
+.ex-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ex-copy h2 {
+  font-size: var(--fs-xl);
+}
+
+.ex-lead {
+  color: var(--color-text);
+}
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.steps::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width 1.6s ease .2s;
+}
+
+.steps.is-visible::after {
+  width: calc(100% - 44px);
+}
+
+.st-step {
+  position: relative;
+}
+
+.st-dot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  transition: border-color .3s, background .3s, color .3s;
+  transition-delay: calc(.2s + var(--i) * .4s);
+}
+
+.steps.is-visible .st-dot {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #0a0b0d;
+}
+
+.st-step h3 {
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 860px) {
+  .explorer {
+    grid-template-columns: 1fr;
+  }
+  .ex-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .ex-tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .ex-tab:hover {
+    transform: none;
+  }
+  .ex-panel {
+    grid-template-columns: 1fr;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .steps::before, .steps::after {
+    display: none;
+  }
 }
