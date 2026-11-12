@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Galatico Studios</title>
+  <meta name="description" content="Galatico Studios offers game development and co-development, AR apps, location-based experiences, on-device AI integration, ASP.NET Core backends and consultancy for studios, heritage organisations and businesses.">
+  <link rel="icon" href="../assets/media/logo/Galatico_Studios_B2B_Logo_Black.ico" sizes="any">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/services.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/media/logo/Galatico_Studios_B2B_Logo_White.png" alt="Galatico Studios logo">
+        Galatico Studios
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="our-games.html">Our Games</a></li>
+          <li><a href="mailto:msmith@galaticostudios.co.uk">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">Services</p>
+        <h1>What we can build with you.</h1>
+        <p class="services-intro">From full games to AR heritage trails, on-device AI and the backend that holds it all together. Bring us an idea, a half-finished project or a tricky technical problem, and we'll help you ship it.</p>
+      </div>
+
+      <!-- Service cards. Each card: icon chip, title, one-line pitch, a short
+           list of what's included, and the tech/proof tags along the bottom.
+           To add a service, copy an <article class="service-card"> block. -->
+      <div class="services-grid">
+        <article class="service-card" id="game-development">
+          <span class="service-card-icon" aria-hidden="true">01</span>
+          <h2>Game Development &amp; Co-Development</h2>
+          <p class="service-card-lead">Complete games built from concept to launch, or an experienced team that slots into yours.</p>
+          <ul class="service-card-list">
+            <li>End-to-end development: design, prototyping, production and release</li>
+            <li>Co-development: we take ownership of features, levels or systems alongside your team</li>
+            <li>Gameplay programming, systems design and level design</li>
+            <li>Porting, optimisation and performance work for mobile and PC</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Technologies">
+            <li class="platform-tag">Unity</li>
+            <li class="platform-tag">PC</li>
+            <li class="platform-tag">Mobile</li>
+          </ul>
+        </article>
+
+        <article class="service-card" id="ar-apps">
+          <span class="service-card-icon" aria-hidden="true">02</span>
+          <h2>Augmented Reality Apps</h2>
+          <p class="service-card-lead">AR experiences that bring real places, objects and stories to life through a phone camera.</p>
+          <ul class="service-card-list">
+            <li>World-anchored AR content placed at real locations</li>
+            <li>Map-driven AR using Mapbox for outdoor, site-wide experiences</li>
+            <li>Shipped with Niantic Lightship, so we can advise on and migrate projects that relied on it</li>
+            <li>Built in Unity for iOS and Android</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Technologies">
+            <li class="platform-tag">Unity</li>
+            <li class="platform-tag">Mapbox</li>
+            <li class="platform-tag">Niantic Spatial</li>
+          </ul>
+        </article>
+
+        <article class="service-card" id="location-based">
+          <span class="service-card-icon" aria-hidden="true">03</span>
+          <h2>Location-Based Experiences</h2>
+          <p class="service-card-lead">GPS-driven games and audio tours that get people out exploring, made for heritage sites, attractions and organisations.</p>
+          <ul class="service-card-list">
+            <li>Location-based games with collecting, quests and achievements</li>
+            <li>Audio tours and adaptive storytelling that respond to where and how fast visitors walk</li>
+            <li>Experiences designed around real sites, routes and visitor flow</li>
+            <li>Delivered for The National Trust site Avebury, projects include Echoes of Avebury, Neolithic Trails and Tales of Flint</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Technologies">
+            <li class="platform-tag">GPS</li>
+            <li class="platform-tag">Mapbox</li>
+            <li class="platform-tag">Audio</li>
+          </ul>
+        </article>
+
+        <article class="service-card" id="ai-integration">
+          <span class="service-card-icon" aria-hidden="true">04</span>
+          <h2>AI Integration &amp; Tools</h2>
+          <p class="service-card-lead">Practical AI features in your apps and pipelines, including language models that run entirely on your own hardware.</p>
+          <ul class="service-card-list">
+            <li>MythMaker: an AI director that turns the game mechanics a player uses into narrative as they play. It currently runs on Zork, on Windows and Android</li>
+            <li>Local LLM deployment in C# and .NET with LLamaSharp, so there are no third-party AI APIs and no per-request costs</li>
+            <li>GPU-accelerated inference with CUDA for fast responses on NVIDIA hardware</li>
+            <li>On-device AI for mobile that works offline and keeps user data on the phone</li>
+            <li>Custom AI-powered tools that speed up your team's workflow</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Technologies">
+            <li class="platform-tag">LLamaSharp</li>
+            <li class="platform-tag">CUDA</li>
+            <li class="platform-tag">On-Device AI</li>
+          </ul>
+        </article>
+
+        <article class="service-card" id="backend">
+          <span class="service-card-icon" aria-hidden="true">05</span>
+          <h2>Backend &amp; Software Engineering</h2>
+          <p class="service-card-lead">The servers, databases and APIs behind your game or app, built to be reliable and easy to maintain.</p>
+          <ul class="service-card-list">
+            <li>Database design and setup</li>
+            <li>REST APIs and web services in ASP.NET Core</li>
+            <li>Player accounts, save data, leaderboards and content management</li>
+            <li>Connecting Unity clients to custom backends</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Technologies">
+            <li class="platform-tag">ASP.NET Core</li>
+            <li class="platform-tag">C#</li>
+            <li class="platform-tag">Databases</li>
+          </ul>
+        </article>
+
+        <article class="service-card" id="consultancy">
+          <span class="service-card-icon" aria-hidden="true">06</span>
+          <h2>Consultancy</h2>
+          <p class="service-card-lead">Experienced advice before you commit time and budget, or when a project needs a second opinion.</p>
+          <ul class="service-card-list">
+            <li>Feasibility and technical scoping for games, AR and location-based projects</li>
+            <li>Choosing the right technology, especially for AR and AI</li>
+            <li>Project and codebase reviews, plus rescue for projects that have stalled</li>
+            <li>Game design and playtesting feedback</li>
+          </ul>
+          <ul class="platform-tags" aria-label="Areas">
+            <li class="platform-tag">Scoping</li>
+            <li class="platform-tag">Tech Advice</li>
+            <li class="platform-tag">Reviews</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- How we work: a short process strip so prospective clients know what
+         to expect after they get in touch. -->
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">How We Work</p>
+        <h2>From first chat to launch and beyond.</h2>
+      </div>
+      <ol class="process-grid">
+        <li class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">1</span>
+          <h3>Talk</h3>
+          <p>Tell us what you want to make. We'll ask questions, look at what's possible and give you honest advice, even if that means a smaller scope.</p>
+        </li>
+        <li class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">2</span>
+          <h3>Prototype</h3>
+          <p>We build something playable early and fail fast, so the final product is shaped by quick iterations and real play, not months of outdated, speculative design.</p>
+        </li>
+        <li class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">3</span>
+          <h3>Build</h3>
+          <p>We develop in short iterations with regular builds and check-ins, so you always know where the project stands.</p>
+        </li>
+        <li class="approach-card">
+          <span class="approach-card-icon" aria-hidden="true">4</span>
+          <h3>Launch &amp; Support</h3>
+          <p>We help you release and stay around afterwards with fixes, updates and support. We don't pack up the moment the deadline passes.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container">
+      <div class="services-cta">
+        <h2>Have a project in mind?</h2>
+        <p>Whether it's a full game, an AR trail for your site or an hour of advice, we'd love to hear about it.</p>
+        <a class="btn btn-primary" href="mailto:msmith@galaticostudios.co.uk?subject=Project%20enquiry">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-social">
+        <a href="https://instagram.com/galaticostudiosofficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@GalaticoStudiosOfficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+            <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
+          </svg>
+        </a>
+        <a href="mailto:msmith@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="footer-legal" aria-label="Legal">
+        <ul>
+          <li><a href="legal-notice.html">Legal Notice</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="footer-bottom">&copy; <span class="current-year"></span> Galatico Studios Ltd. All rights reserved.</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We use minimal cookies to remember your preferences. No tracking, no third-party ads.</p>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-secondary" id="cookie-decline" type="button">Decline</button>
+      <button class="btn btn-primary" id="cookie-accept" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/cookie-consent.js" defer></script>
+</body>
+</html>

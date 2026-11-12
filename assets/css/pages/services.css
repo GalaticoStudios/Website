@@ -1,0 +1,103 @@
+/*
+  services.css
+  ------------
+  Styling specific to Pages/services.html: the service cards grid, the
+  "How We Work" process steps and the closing call-to-action panel.
+*/
+
+.services-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: var(--space-sm) auto 0;
+}
+
+/* --- Service cards ---------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-md);
+}
+
+.service-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  /* Keeps the card clear of the sticky header when linked to via #anchor */
+  scroll-margin-top: 6rem;
+}
+
+.service-card-icon {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.14em;
+}
+
+.service-card h2 {
+  font-size: var(--fs-lg);
+  color: var(--color-text);
+}
+
+.service-card-lead {
+  color: var(--color-text);
+}
+
+/* Bullets are drawn with a small accent dash since base.css strips the
+   default list markers site-wide. */
+.service-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex-grow: 1;
+}
+
+.service-card-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.service-card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.6rem;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+/* --- How We Work -------------------------------------------------------------
+   Reuses .approach-card / .approach-card-icon from components.css; this just
+   lays the four steps out in a row. */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+/* --- Call to action ---------------------------------------------------------- */
+.services-cta {
+  text-align: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.services-cta h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.services-cta p {
+  max-width: 50ch;
+  margin: 0 auto var(--space-md);
+}
