@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Galatico Studios</title>
+  <meta name="description" content="Galatico Studios offers game development and co-development, AR apps, location-based experiences, on-device AI integration, ASP.NET Core backends and consultancy for studios, heritage organisations and businesses.">
+  <link rel="icon" href="../assets/media/logo/Galatico_Studios_B2B_Logo_Black.ico" sizes="any">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/services.css">
+  <!-- Marks the page as JS-enabled before first paint, so scroll-reveal
+       content is only hidden when the script that reveals it will run. -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">
+        <img src="../assets/media/logo/Galatico_Studios_B2B_Logo_White.png" alt="Galatico Studios logo">
+        Galatico Studios
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="our-games.html">Our Games</a></li>
+          <li><a href="mailto:msmith@galaticostudios.co.uk">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="ex-hero">
+      <div class="container">
+        <p class="kicker">Services</p>
+        <h1>We build <span class="rotator" aria-live="off"><span class="rot-word">games</span></span><br>with you.</h1>
+        <p class="ex-intro">From full games to AR heritage trails, on-device AI and the backend that holds it all together. Pick a service to see what we do.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="explorer reveal">
+        <!-- Service explorer. Each service has a tab <button> here and a
+             matching .ex-panel below, linked by id (tab-xxx <-> panel-xxx).
+             To add a service, copy one of each and give them a new id. -->
+        <div class="ex-tabs" role="tablist" aria-label="Services">
+          <button class="ex-tab" role="tab" id="tab-game-development" aria-controls="panel-game-development" aria-selected="true" tabindex="0"><span class="ex-num">01</span><span class="ex-name">Game Development &amp; Co-Development</span><span class="ex-bar"></span></button>
+          <button class="ex-tab" role="tab" id="tab-ar-apps" aria-controls="panel-ar-apps" aria-selected="false" tabindex="-1"><span class="ex-num">02</span><span class="ex-name">Augmented Reality Apps</span><span class="ex-bar"></span></button>
+          <button class="ex-tab" role="tab" id="tab-location-based" aria-controls="panel-location-based" aria-selected="false" tabindex="-1"><span class="ex-num">03</span><span class="ex-name">Location-Based Experiences</span><span class="ex-bar"></span></button>
+          <button class="ex-tab" role="tab" id="tab-ai-integration" aria-controls="panel-ai-integration" aria-selected="false" tabindex="-1"><span class="ex-num">04</span><span class="ex-name">AI Integration &amp; Tools</span><span class="ex-bar"></span></button>
+          <button class="ex-tab" role="tab" id="tab-backend" aria-controls="panel-backend" aria-selected="false" tabindex="-1"><span class="ex-num">05</span><span class="ex-name">Backend &amp; Software Engineering</span><span class="ex-bar"></span></button>
+          <button class="ex-tab" role="tab" id="tab-consultancy" aria-controls="panel-consultancy" aria-selected="false" tabindex="-1"><span class="ex-num">06</span><span class="ex-name">Consultancy</span><span class="ex-bar"></span></button>
+        </div>
+        <div class="ex-panels">
+          <div class="ex-panel" role="tabpanel" id="panel-game-development" aria-labelledby="tab-game-development">
+            <div class="viz viz-img">
+              <img src="../assets/media/games/Galatico/GALATICO_MainCapsule.png" alt="Galatico key art" loading="lazy">
+            </div>
+            <div class="ex-copy">
+              <h2>Game Development &amp; Co-Development</h2>
+              <p class="ex-lead">Complete games built from concept to launch, or an experienced team that slots into yours.</p>
+              <ul class="svc-list">
+                <li>End-to-end development: design, prototyping, production and release</li>
+                <li>Co-development: we take ownership of features, levels or systems alongside your team</li>
+                <li>Gameplay programming, systems design and level design</li>
+                <li>Porting, optimisation and performance work for mobile and PC</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">Unity</li>
+                <li class="platform-tag">PC</li>
+                <li class="platform-tag">Mobile</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ex-panel" role="tabpanel" id="panel-ar-apps" aria-labelledby="tab-ar-apps" hidden>
+            <div class="viz viz-ar" aria-hidden="true">
+              <div class="ar-phone">
+                <div class="ar-screen">
+                  <img src="../assets/media/games/echoes-of-avebury/EchoesARView.png" alt="">
+                  <div class="ar-reticle"></div>
+                  <div class="ar-label">Clue found</div>
+                </div>
+              </div>
+            </div>
+            <div class="ex-copy">
+              <h2>Augmented Reality Apps</h2>
+              <p class="ex-lead">AR experiences that bring real places, objects and stories to life through a phone camera.</p>
+              <ul class="svc-list">
+                <li>World-anchored AR content placed at real locations</li>
+                <li>Map-driven AR using Mapbox for outdoor, site-wide experiences</li>
+                <li>Shipped with Niantic Lightship, so we can advise on and migrate projects that relied on it</li>
+                <li>Built in Unity for iOS and Android</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">Unity</li>
+                <li class="platform-tag">Mapbox</li>
+                <li class="platform-tag">Niantic Spatial</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ex-panel" role="tabpanel" id="panel-location-based" aria-labelledby="tab-location-based" hidden>
+            <div class="viz viz-map" aria-hidden="true">
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(244,245,247,.06)"/></pattern></defs><rect width="400" height="240" fill="url(#g)"/><path class="map-route" d="M30 200 C 90 150, 120 210, 170 150 S 260 60, 300 110 S 360 170, 375 50" fill="none" stroke="#2fe3ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/><g class="map-pin" style="--d:0s"><circle cx="30" cy="200" r="14"/><circle cx="30" cy="200" r="5"/></g><g class="map-pin" style="--d:.6s"><circle cx="170" cy="150" r="14"/><circle cx="170" cy="150" r="5"/></g><g class="map-pin" style="--d:1.2s"><circle cx="300" cy="110" r="14"/><circle cx="300" cy="110" r="5"/></g><g class="map-pin" style="--d:1.8s"><circle cx="375" cy="50" r="14"/><circle cx="375" cy="50" r="5"/></g><circle class="map-walker" r="7" fill="#f4f5f7"><animateMotion dur="9s" repeatCount="indefinite" path="M30 200 C 90 150, 120 210, 170 150 S 260 60, 300 110 S 360 170, 375 50"/></circle></svg>
+              <div class="map-logos">
+                <img src="../assets/media/games/neolithic-trails/NeolithicTrialsLogo_NoBackground.png" alt="">
+                <img src="../assets/media/games/tales-of-flint/tales_of_flint_app_icon_432.png" alt="">
+              </div>
+            </div>
+            <div class="ex-copy">
+              <h2>Location-Based Experiences</h2>
+              <p class="ex-lead">GPS-driven games and audio tours that get people out exploring, made for heritage sites, attractions and organisations.</p>
+              <ul class="svc-list">
+                <li>Location-based games with collecting, quests and achievements</li>
+                <li>Audio tours and adaptive storytelling that respond to where and how fast visitors walk</li>
+                <li>Experiences designed around real sites, routes and visitor flow</li>
+                <li>Delivered for The National Trust site Avebury, projects include Echoes of Avebury, Neolithic Trails and Tales of Flint</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">GPS</li>
+                <li class="platform-tag">Mapbox</li>
+                <li class="platform-tag">Audio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ex-panel" role="tabpanel" id="panel-ai-integration" aria-labelledby="tab-ai-integration" hidden>
+            <div class="viz viz-term">
+              <div class="term-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <em>AI director (illustrative)</em>
+              </div>
+              <pre class="term-body" data-type><span class="t-in">&gt; light lantern</span>
+<span class="t-sys">[mechanic] player used light source x3 in dark areas</span>
+<span class="t-out">The lantern flares again. Somewhere below, something
+that has waited a long time for light begins to stir...</span></pre>
+              <p class="term-note">Runs locally: LLamaSharp + CUDA, no cloud calls</p>
+            </div>
+            <div class="ex-copy">
+              <h2>AI Integration &amp; Tools</h2>
+              <p class="ex-lead">Practical AI features in your apps and pipelines, including language models that run entirely on your own hardware.</p>
+              <ul class="svc-list">
+                <li>MythMaker: an AI director that turns the game mechanics a player uses into narrative as they play. It currently runs on Zork, on Windows and Android</li>
+                <li>Local LLM deployment in C# and .NET with LLamaSharp, so there are no third-party AI APIs and no per-request costs</li>
+                <li>GPU-accelerated inference with CUDA for fast responses on NVIDIA hardware</li>
+                <li>On-device AI for mobile that works offline and keeps user data on the phone</li>
+                <li>Custom AI-powered tools that speed up your team's workflow</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">LLamaSharp</li>
+                <li class="platform-tag">CUDA</li>
+                <li class="platform-tag">On-Device AI</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ex-panel" role="tabpanel" id="panel-backend" aria-labelledby="tab-backend" hidden>
+            <div class="viz viz-code" aria-hidden="true">
+              <pre><code><span class="c-k">var</span> app = WebApplication.<span class="c-f">Create</span>(args);
+
+app.<span class="c-f">MapGet</span>(<span class="c-s">"/players/{id}/save"</span>,
+  <span class="c-k">async</span> (<span class="c-t">int</span> id, <span class="c-t">GameDb</span> db) =&gt;
+    <span class="c-k">await</span> db.Saves.<span class="c-f">FindAsync</span>(id));
+
+app.<span class="c-f">MapPost</span>(<span class="c-s">"/leaderboard"</span>, ...);
+app.<span class="c-f">Run</span>();</code></pre>
+            </div>
+            <div class="ex-copy">
+              <h2>Backend &amp; Software Engineering</h2>
+              <p class="ex-lead">The servers, databases and APIs behind your game or app, built to be reliable and easy to maintain.</p>
+              <ul class="svc-list">
+                <li>Database design and setup</li>
+                <li>REST APIs and web services in ASP.NET Core</li>
+                <li>Player accounts, save data, leaderboards and content management</li>
+                <li>Connecting Unity clients to custom backends</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">ASP.NET Core</li>
+                <li class="platform-tag">C#</li>
+                <li class="platform-tag">Databases</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ex-panel" role="tabpanel" id="panel-consultancy" aria-labelledby="tab-consultancy" hidden>
+            <div class="viz viz-consult" aria-hidden="true">
+              <ul class="qa-list">
+                <li class="qa" style="--i:0"><p class="qa-q">Our project has stalled. Can you help?</p><p class="qa-a">Let's chat and see what your blockers are.</p></li>
+                <li class="qa" style="--i:1"><p class="qa-q">Can you work alongside our existing team?</p><p class="qa-a">Absolutely. Teams? Slack? Zoom? Whatever works best for you.</p></li>
+                <li class="qa" style="--i:2"><p class="qa-q">We're a heritage site with no tech team. Where do we start?</p><p class="qa-a">Let's think about your visitors and what they tend to miss.</p></li>
+                <li class="qa" style="--i:3"><p class="qa-q">What gaps are in our budget?</p><p class="qa-a">Never forget the cost and value of QA.</p></li>
+              </ul>
+            </div>
+            <div class="ex-copy">
+              <h2>Consultancy</h2>
+              <p class="ex-lead">Experienced advice before you commit time and budget, or when a project needs a second opinion.</p>
+              <ul class="svc-list">
+                <li>Feasibility and technical scoping for games, AR and location-based projects</li>
+                <li>Choosing the right technology, especially for AR and AI</li>
+                <li>Project and codebase reviews, plus rescue for projects that have stalled</li>
+                <li>Game design and playtesting feedback</li>
+              </ul>
+              <ul class="platform-tags">
+                <li class="platform-tag">Scoping</li>
+                <li class="platform-tag">Tech Advice</li>
+                <li class="platform-tag">Reviews</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="kicker">How We Work</p>
+        <h2>From first chat to launch and beyond.</h2>
+      </div>
+      <ol class="steps reveal">
+        <li class="st-step" style="--i:0"><span class="st-dot">1</span><h3>Talk</h3><p>Tell us what you want to make. We'll ask questions, look at what's possible and give you honest advice, even if that means a smaller scope.</p></li>
+        <li class="st-step" style="--i:1"><span class="st-dot">2</span><h3>Prototype</h3><p>We build something playable early and fail fast, so the final product is shaped by quick iterations and real play, not months of outdated, speculative design.</p></li>
+        <li class="st-step" style="--i:2"><span class="st-dot">3</span><h3>Build</h3><p>We develop in short iterations with regular builds and check-ins, so you always know where the project stands.</p></li>
+        <li class="st-step" style="--i:3"><span class="st-dot">4</span><h3>Launch &amp; Support</h3><p>We help you release and stay around afterwards with fixes, updates and support. We don't pack up the moment the deadline passes.</p></li>
+      </ol>
+    </section>
+
+    <section class="section container">
+      <div class="p-cta reveal">
+        <h2>Have a project in mind?</h2>
+        <p>Whether it's a full game, an AR trail for your site or an hour of advice, we'd love to hear about it.</p>
+        <a class="btn btn-primary" href="mailto:msmith@galaticostudios.co.uk?subject=Project%20enquiry">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-social">
+        <a href="https://instagram.com/galaticostudiosofficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@GalaticoStudiosOfficial" target="_blank" rel="noopener noreferrer" aria-label="Galatico Studios on YouTube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="5" width="20" height="14" rx="4"></rect>
+            <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"></polygon>
+          </svg>
+        </a>
+        <a href="mailto:msmith@galaticostudios.co.uk" aria-label="Email Galatico Studios">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M3 7l9 6 9-6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="footer-legal" aria-label="Legal">
+        <ul>
+          <li><a href="legal-notice.html">Legal Notice</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="footer-bottom">&copy; <span class="current-year"></span> Galatico Studios Ltd. All rights reserved.</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We use minimal cookies to remember your preferences. No tracking, no third-party ads.</p>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-secondary" id="cookie-decline" type="button">Decline</button>
+      <button class="btn btn-primary" id="cookie-accept" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/cookie-consent.js" defer></script>
+  <script src="../assets/js/services.js" defer></script>
+</body>
+</html>

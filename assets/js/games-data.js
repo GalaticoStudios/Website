@@ -22,23 +22,15 @@ const games = [
     title: "Galatico",
     slug: "galatico",
     tagline: "Boomer Shooter with Portals",
-    description:"Blast your way to the top of GALATICO, a high-tempo movement shooter inspired by the best shooters of the 90s."+ 
+    description:"Blast your way to the top of GALATICO, a high-tempo movement shooter inspired by the best shooters of the 90s."+
     "Dismantle the gatekeepers of the universe's most powerful technology: Portals."+
     " Clock-in… it's time to trim the fat from GALATICO.",
     image: "assets/media/games/Galatico/GALATICO_MainCapsule.png",
-    platforms: ["Mobile"],
-  },
-  {
-    title: "Neolithic Trails",
-    slug: "neolithic-trails",
-    tagline: "Collect items, build a stone family, and rediscover the past.",
-    description:
-      "Neolithic Trails is a location-based collecting game set at the ancient " +
-      "site of Avebury. Explore the landscape, collect items, build your own " +
-      "stone family, and unlock an ever-growing array of achievements that " +
-      "keep you moving and invested in your journey through the past.",
-    image: "assets/media/games/neolithic-trails/NeolithicTrialsLogo_NoBackground.png",
-    platforms: ["Mobile"],
+    platforms: ["PC"],
+    // Optional: an external page (e.g. a store listing) the card links to
+    // instead of this game's entry on our-games.html.
+    link: "https://store.steampowered.com/app/3308220/Galatico/",
+    linkLabel: "View on Steam",
   },
   {
     title: "Echoes of Avebury",
@@ -50,7 +42,19 @@ const games = [
       "landscape of Avebury. Explore, gather clues, and help resolve a " +
       "dispute that spans thousands of years.",
     image: "assets/media/games/echoes-of-avebury/EchoesOfAveburyLogo.png",
-    platforms: ["Mobile", "AR"],
+    platforms: ["Mobile", "AR", "GPS"],
+  },
+  {
+    title: "Neolithic Trails",
+    slug: "neolithic-trails",
+    tagline: "Collect items, build a stone family, and rediscover the past.",
+    description:
+      "Neolithic Trails is a location-based collecting game set at the ancient " +
+      "site of Avebury. Explore the landscape, collect items, build your own " +
+      "stone family, and unlock an ever-growing array of achievements that " +
+      "keep you moving and invested in your journey through the past.",
+    image: "assets/media/games/neolithic-trails/NeolithicTrialsLogo_NoBackground.png",
+    platforms: ["Mobile", "GPS"],
   },
   {
     title: "Tales of Flint",
@@ -62,7 +66,7 @@ const games = [
       "ago, uncovering different tales spanning six different periods of " +
       "time.",
     image: "assets/media/games/tales-of-flint/tales_of_flint_app_icon_432.png",
-    platforms: ["Mobile"],
+    platforms: ["Mobile", "Audio"],
   }
 ];
 
@@ -91,6 +95,13 @@ function createGameCard(game, rootPrefix) {
     .map((platform) => `<span class="platform-tag">${platform}</span>`)
     .join("");
 
+  // Games with an external `link` (e.g. Steam) open it in a new tab;
+  // everything else links to the game's entry on our-games.html.
+  const linkAttrs = game.link
+    ? `href="${game.link}" target="_blank" rel="noopener noreferrer"`
+    : `href="${rootPrefix}Pages/our-games.html#${game.slug}"`;
+  const linkLabel = game.linkLabel || "Learn more";
+
   card.innerHTML = `
     <img src="${rootPrefix}${game.image}" alt="${game.title} cover art" loading="lazy">
     <span class="arrow-chip" aria-hidden="true">&rarr;</span>
@@ -99,7 +110,7 @@ function createGameCard(game, rootPrefix) {
       <p class="game-card-tagline">${game.tagline}</p>
       <p class="game-card-description">${game.description}</p>
       <div class="platform-tags">${platformTagsHtml}</div>
-      <a class="btn btn-secondary" href="${rootPrefix}Pages/our-games.html#${game.slug}"><span>Learn more</span></a>
+      <a class="btn btn-secondary" ${linkAttrs}><span>${linkLabel}</span></a>
     </div>
   `;
 
